@@ -51,7 +51,7 @@
                                  <li><a href="{{ url ("/profil")}}">Profil</a></li>
                                  <li><a href="{{ url ("/product")}}">Product</a></li>
                                  <li><a href="{{ url ("/kategori")}}">Kategori</a></li>
-                                 <li><a href="{{ url ("/login")}}">Logout</a></li>
+                                 <li><a href="{{ url ("/login")}}">Login</a></li>
                               </ul>
                            </div>
                         </div>
