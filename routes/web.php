@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,45 +17,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/layout', function () {
-    return view("admin.layout");
-});
-Route::get('/about', function () {
+
+Route::get('about', function () {
     return view("about");
 });
-Route::get('/profil', function () {
+Route::get('profil', function () {
     return view("profil");
 });
-Route::get('/product', function () {
+Route::get('product', function () {
     return view("product");
 });
-Route::get('/kategori', function () {
+Route::get('kategori', function () {
     return view("kategori");
 });
-Route::get('/login', function () {
+Route::get('login', function () {
     return view("login");
 });
-Route::get('/admin', function () {
-    return view("admin.admin");
-});
-Route::get('/about2', function () {
-    return view("about2");
-});
-Route::get('/profil2', function () {
-    return view("profil2");
-});
-Route::get('/product2', function () {
-    return view("product2");
-});
-Route::get('/kategori2', function () {
-    return view("kategori2");
-});
-Route::get('/login2', function () {
-    return view("login2");
-});
-Route::get('/pelanggan', function () {
-    return view("pelanggan");
-});
-Route::get('/supplier', function () {
-    return view("supplier");
-});
+
+Route::get('about2', [HomeController::class, 'showAbout']);
+Route::get('profil2', [HomeController::class, 'showProfil']);
+Route::get('product2', [HomeController::class, 'showProduct']);
+Route::get('kategori2', [HomeController::class, 'showKategori']);
+Route::get('login2', [AuthController::class, 'showLogin']);
+Route::get('pelanggan', [HomeController::class, 'showPelanggan']);
+Route::get('supplier', [HomeController::class, 'showSupplier']);
+

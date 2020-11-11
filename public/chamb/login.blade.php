@@ -94,11 +94,11 @@ label {
      <div id="card"> 
         <div id="card-content">
             <div id="card-title">
-    <a href="{{url('index')}}"><h2>LOGIN</h2></a>
+    <a href="{{url('layout')}}"><h2>LOGIN</h2></a>
     <div class="underline-title"></div>
          </div>
             </div>
-    <form action="{{url('index')}}" method="post" class="form"> 
+    <form action="{{url('layout')}}" method="post" class="form"> 
         
                     <div class="form-group">
                         <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
@@ -108,7 +108,7 @@ label {
                         <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
                     </div>
     
-    <a href="{{url('index')}}" id="submit-btn" type="submit" name="submit">Login</a>
+    <a href="{{url('layout')}}" id="submit-btn" type="submit" name="submit">Login</a>
         </form>
     </div>
 
